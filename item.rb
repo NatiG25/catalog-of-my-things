@@ -1,27 +1,28 @@
+# frozen_string_literal: true
+
+# item class
 class Item
-    def initialize(archived = true)
-        @id = Random.rand(1..1000)
-        @archived = archived
-        @genre = []
-        @author = []
-        @label = []
-        @publish_date = []
-        @source = []
-    end
+  def initialize(archived: true)
+    @id = Random.rand(1..1000)
+    @archived = archived
+    @genre = []
+    @author = []
+    @label = []
+    @published_date = []
+    @source = []
+  end
 
-    def genre=(genre)
-        @genre = genre
-    end
+  attr_writer :genre, :author, :label, :source
 
-    def author=(author)
-        @author = author
-    end
+  def can_be_archived?
+    @published_date > 10
+  end
 
-    def label=(label)
-        @label = label
+  def move_to_archive
+    if can_be_archived? true
+      @archived = true
+    else
+      false
     end
-
-    def source=(source)
-        @source = source
-    end
+  end
 end
