@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # item class
 class Item
   def initialize(archived: true)
