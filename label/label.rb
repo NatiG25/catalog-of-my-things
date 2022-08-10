@@ -1,6 +1,4 @@
-require_relative '../item'
-
-class Label < Item
+class Label
   attr_accessor :items, :title, :id
 
   def initialize(title, id = nil)
