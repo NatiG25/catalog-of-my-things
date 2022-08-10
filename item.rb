@@ -1,12 +1,12 @@
-# item class
+require 'date'
 class Item
-  attr_accessor :author, :label
-  attr_reader :publish_date, :genre
+  attr_accessor :author
+  attr_reader :publish_date, :genre, :label
 
-  def initialize(publish_date, archived: true)
-    @id = Random.rand(1..1000)
+  def initialize(publish_date, id = nil, archived: false)
+    @id = id || Random.rand(1..1000)
     @archived = archived
-    @publish_date = publish_date
+    @publish_date = Date.parse(publish_date)
   end
 
   def genre=(genre)
@@ -14,8 +14,13 @@ class Item
     genre.items << self unless genre.items.include?(self)
   end
 
+  def label=(label)
+    @label = label.title
+    label.items << self unless label.items.include?(self)
+  end
+
   def can_be_archived?
-    @publish_date > 10
+    (Date.today.year - @publish_date.year) > 10
   end
 
   def move_to_archive?
