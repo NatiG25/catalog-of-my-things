@@ -2,7 +2,7 @@ require_relative './app'
 require_relative './check_input'
 
 def main
-  app = app.new
+  app = App.new
   loop do
     puts 'Please choose an option by entering a number'
     puts '1 - List all books'
@@ -14,7 +14,9 @@ def main
     puts '7 - Create a book'
     puts '8 - Create a music album'
     puts '9 - Create a game'
-  input = gets.chomp.to_i
+    puts '10 - Exit the app'
+    input = gets.chomp.to_i
+    CheckInput.check_input(input, app)
   end
 end
 
