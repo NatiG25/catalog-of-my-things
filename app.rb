@@ -63,7 +63,7 @@ class App
   end
 
   def create_book(publish_date, publisher, cover_state, _id = nil, archived: false)
-    @book << Book.new(publish_date, publisher, cover_state, archived: archived)
+    @books << Book.new(publish_date, publisher, cover_state, archived: archived)
   end
 
   def create_label(title)

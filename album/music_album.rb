@@ -12,7 +12,7 @@ class MusicAlbum < Item
     super && @on_spotify
   end
 
-  def to_json(*args)
+  def to_json(*_args)
     JSON.generate(
       {
         on_spotify: @on_spotify,
