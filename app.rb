@@ -28,6 +28,9 @@ class App
   end
 
   def create_genre(name)
-    @music_album = Genre.new(name)
+    @genre = Genre.new(name)
   end
+
+  def create_book(publish_date, publisher, cover_state, id = nil, archived: false)
+    @book = Book.new('20/10/2021', 'NY Times', 'good', 2)
 end
