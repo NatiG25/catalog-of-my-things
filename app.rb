@@ -12,26 +12,43 @@ class App
   end
 
   def list_books
-    @book.each do |b|
-      puts "[#{b.class}} - Publish Date: #{b.publish_date} Publisher: #{b.publisher} Cover State: #{b.cover_state}"
+    if @book.empty?
+      puts 'Book list is empty!'
+    else
+      @book.each do |b|
+        puts "[#{b.class}] - Publish Date: '#{b.publish_date}'
+        Publisher: '#{b.publisher}' Cover State: '#{b.cover_state}'"
+      end
     end
   end
 
   def list_labels
-    @label.each do |label|
-      puts "[#{label.class}] - Title: #{label.title}"
+    if @label.empty?
+      puts 'Label list is empty'
+    else
+      @label.each do |label|
+        puts "[#{label.class}] - Title: #{label.title}"
+      end
     end
   end
 
   def list_music_albums
-    @music_album.each do |album|
-      puts "[#{album.class}] - Publish Date: #{album.publish_date}"
+    if @music_album.empty?
+      puts 'Music albums list is empty'
+    else
+      @music_album.each do |album|
+        puts "[#{album.class}] - Publish Date: '#{album.publish_date}'"
+      end
     end
   end
 
   def list_genre
-    @genre.each do |genre|
-      puts "[#{genre.class}] - Name: #{genre.name}"
+    if @genre.empty?
+      puts 'Genre list is empty'
+    else
+      @genre.each do |genre|
+        puts "[#{genre.class}] - Name: #{genre.name}"
+      end
     end
   end
 
@@ -43,11 +60,11 @@ class App
     @genre << Genre.new(name)
   end
 
-  def create_book(_publish_date, _publisher, _cover_state, _id = nil, archived: false)
-    @book << Book.new('20/10/2021', 'NY Times', 'good', 2, archived: archived)
+  def create_book(publish_date, publisher, cover_state, _id = nil, archived: false)
+    @book << Book.new(publish_date, publisher, cover_state, archived: archived)
   end
 
-  def create_label(_title)
-    @label << Label.new('Comedy')
+  def create_label(title)
+    @label << Label.new(title)
   end
 end

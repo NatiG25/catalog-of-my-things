@@ -1,5 +1,6 @@
 require './album/music_album_main'
 require './genre/genre_main'
+require './book/book_main'
 require './app'
 
 class CheckInput
@@ -10,7 +11,7 @@ class CheckInput
     when 7..9
       create_options(input, app)
     when 10
-      puts 'Goodbye!'
+      puts 'Goodbye! 👋'
       raise StopIteration
     else
       puts 'Please enter a valid input:'
@@ -37,7 +38,7 @@ class CheckInput
   def self.create_options(input, app)
     case input
     when 7
-      app.create_book
+      CreateBook.create_book(app)
     when 8
       CreateMusicAlbum.create_music_album(app)
     when 9
