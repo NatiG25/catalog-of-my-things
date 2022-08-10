@@ -4,18 +4,20 @@ require_relative './genre/genre'
 require_relative './label/label'
 
 class App
+  attr_accessor :books, :labels, :music_albums, :genres
+
   def initialize
-    @book = []
-    @label = []
-    @music_album = []
-    @genre = []
+    @books = []
+    @labels = []
+    @music_albums = []
+    @genres = []
   end
 
   def list_books
-    if @book.empty?
+    if @books.empty?
       puts 'Book list is empty!'
     else
-      @book.each do |b|
+      @books.each do |b|
         puts "[#{b.class}] - Publish Date: '#{b.publish_date}'
         Publisher: '#{b.publisher}' Cover State: '#{b.cover_state}'"
       end
@@ -23,41 +25,41 @@ class App
   end
 
   def list_labels
-    if @label.empty?
+    if @labels.empty?
       puts 'Label list is empty'
     else
-      @label.each do |label|
+      @labels.each do |label|
         puts "[#{label.class}] - Title: #{label.title}"
       end
     end
   end
 
   def list_music_albums
-    if @music_album.empty?
+    if @music_albums.empty?
       puts 'Music albums list is empty'
     else
-      @music_album.each do |album|
+      @music_albums.each do |album|
         puts "[#{album.class}] - Publish Date: '#{album.publish_date}'"
       end
     end
   end
 
   def list_genre
-    if @genre.empty?
+    if @genres.empty?
       puts 'Genre list is empty'
     else
-      @genre.each do |genre|
+      @genres.each do |genre|
         puts "[#{genre.class}] - Name: #{genre.name}"
       end
     end
   end
 
   def create_music_album(publish_date, archived: false, on_spotify: false)
-    @music_album << MusicAlbum.new(publish_date, archived: archived, on_spotify: on_spotify)
+    @music_albums << MusicAlbum.new(publish_date, archived: archived, on_spotify: on_spotify)
   end
 
   def create_genre(name)
-    @genre << Genre.new(name)
+    @genres << Genre.new(name)
   end
 
   def create_book(publish_date, publisher, cover_state, _id = nil, archived: false)
