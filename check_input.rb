@@ -8,7 +8,7 @@ class CheckInput
     when 1..6
       list_all(input, app)
     when 7..9
-      app.create_options
+      create_options(input, app)
     when 10
       puts 'Goodbye!'
       raise StopIteration
@@ -17,7 +17,7 @@ class CheckInput
     end
   end
 
-  def list_all(input, app)
+  def self.list_all(input, app)
     case input
     when 1
       app.list_books
@@ -34,12 +34,12 @@ class CheckInput
     end
   end
 
-  def create_options(input, app)
+  def self.create_options(input, app)
     case input
     when 7
       app.create_book
     when 8
-      app.create_music_album
+      CreateMusicAlbum.create_music_album(app)
     when 9
       false
     end

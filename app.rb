@@ -36,18 +36,18 @@ class App
   end
 
   def create_music_album(publish_date, archived: false, on_spotify: false)
-    @music_album = MusicAlbum.new(publish_date, archived: archived, on_spotify: on_spotify)
+    @music_album << MusicAlbum.new(publish_date, archived: archived, on_spotify: on_spotify)
   end
 
   def create_genre(name)
-    @genre = Genre.new(name)
+    @genre << Genre.new(name)
   end
 
   def create_book(_publish_date, _publisher, _cover_state, _id = nil, archived: false)
-    @book = Book.new('20/10/2021', 'NY Times', 'good', 2, archived: archived)
+    @book << Book.new('20/10/2021', 'NY Times', 'good', 2, archived: archived)
   end
 
   def create_label(_title)
-    @label = Label.new('Comedy')
+    @label << Label.new('Comedy')
   end
 end
