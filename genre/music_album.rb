@@ -1,4 +1,4 @@
-require_relative './item'
+require_relative '../item'
 
 class MusicAlbum < Item
   def initialize(publish_date, archived: true, on_spotify: true)
@@ -9,4 +9,6 @@ class MusicAlbum < Item
   def can_be_archived?
     super && @on_spotify
   end
+
+  private :can_be_archived?
 end
