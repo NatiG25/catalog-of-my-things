@@ -30,11 +30,9 @@ class Storage
         return unless File.exist?(file)
         return if File.zero?(file)
 
-        albums = File.open(file, 'r')
-        albums_parse = JSON.parse(albums.read)
+        albums_parse = JSON.parse(File.read(file))
         albums_parse.each do |album|
             app.create_music_album(album['publish_date'], on_spotify: album['on_spotify'] )
         end
-        albums.close
     end
 end
