@@ -1,5 +1,4 @@
 require './album/music_album_main'
-require './genre/genre_main'
 require './book/book_main'
 require './game/game_main'
 require './app'
