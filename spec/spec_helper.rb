@@ -1,0 +1,5 @@
+require_relative '../genre/genre'
+require_relative '../album/music_album'
+require_relative '../label/label'
+require_relative '../book/book'
+require_relative '../item'
