@@ -1,6 +1,7 @@
 require './album/music_album_main'
 require './genre/genre_main'
 require './book/book_main'
+require './game/game_main'
 require './app'
 
 class CheckInput
@@ -25,13 +26,13 @@ class CheckInput
     when 2
       app.list_music_albums
     when 3
-      false
+      app.list_games
     when 4
-      app.list_genre
+      app.list_genres
     when 5
       app.list_labels
     when 6
-      true
+      app.list_authors
     end
   end
 
@@ -42,7 +43,7 @@ class CheckInput
     when 8
       CreateMusicAlbum.create_music_album(app)
     when 9
-      false
+      CreateGame.create_game(app)
     end
   end
 end
