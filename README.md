@@ -40,17 +40,17 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@NatiG87702270](https://twitter.com/NatiG87702270)
 - LinkedIn: [@Natnail](https://www.linkedin.com/in/natnailgorgis/ )
 
-👤 ****
+👤 **Hammad Siddique** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
 
-- GitHub: [@]()
-- Twitter: [@]()
-- LinkedIn: []()
+- [GitHub](https://github.com/HammadSiddique)
+- [Twitter](https://twitter.com/hs_devv)
+- [LinkedIn](https://www.linkedin.com/in/-hammadsiddique/)
 
-👤 ****
+👤 **Olivier Gasominali**
 
-- GitHub: [@]()
-- Twitter: [@]()
-- LinkedIn: []()
+- GitHub: [@GOlivierNation](https://github.com/GOlivierNation)
+- Twitter: [@OGasominali](https://twitter.com/OGasominali)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/oliviergasominali/)
 
 
 ## Contributing
