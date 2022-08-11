@@ -61,8 +61,8 @@ class App
     if @games.empty?
       puts 'Game list is empty'
     else
-    @games.each do |game|
-      puts "
+      @games.each do |game|
+        puts "
         [#{game.class}] Last Played: #{game.last_played_at}
         Multiplayer: #{game.multiplayer}
         publish: #{game.publish_date}"
@@ -74,8 +74,8 @@ class App
     if @authors.empty?
       puts 'author list is empty'
     else
-    @authors.each do |author|
-      puts "[#{author.class}] First Name: #{author.first_name} Last Name: #{author.last_name}"
+      @authors.each do |author|
+        puts "[#{author.class}] First Name: #{author.first_name} Last Name: #{author.last_name}"
       end
     end
   end
