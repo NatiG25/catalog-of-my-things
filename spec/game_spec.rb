@@ -1,4 +1,4 @@
-require_relative 'game'
+require 'spec_helper'
 
 describe 'Game' do
   context 'when create a new game' do
