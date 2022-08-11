@@ -1,4 +1,4 @@
-require_relative 'author'
+require 'spec_helper'
 
 describe 'Author' do
   context 'when create a new author' do

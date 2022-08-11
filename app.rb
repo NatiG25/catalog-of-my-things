@@ -72,7 +72,7 @@ class App
 
   def list_authors
     if @authors.empty?
-      puts 'author list is empty'
+      puts 'Author list is empty'
     else
       @authors.each do |author|
         puts "[#{author.class}] First Name: #{author.first_name} Last Name: #{author.last_name}"
