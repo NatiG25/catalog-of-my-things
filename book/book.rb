@@ -13,5 +13,15 @@ class Book < Item
     super || cover_state == 'bad'
   end
 
+  def to_json(*_args)
+    JSON.generate(
+      {
+        publish_date: @publish_date,
+        publisher: @publisher,
+        cover_state: @cover_state
+      }
+    )
+  end
+
   private :can_be_archived?
 end

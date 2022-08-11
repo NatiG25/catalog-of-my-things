@@ -1,7 +1,7 @@
 require_relative '../item'
 
 class MusicAlbum < Item
-  attr_accessor :on_spotify
+  attr_accessor :on_spotify, :publish_date
 
   def initialize(publish_date, archived: false, on_spotify: false)
     super(publish_date, archived: archived)
@@ -10,6 +10,15 @@ class MusicAlbum < Item
 
   def can_be_archived?
     super && @on_spotify
+  end
+
+  def to_json(*_args)
+    JSON.generate(
+      {
+        on_spotify: @on_spotify,
+        publish_date: @publish_date
+      }
+    )
   end
 
   private :can_be_archived?
