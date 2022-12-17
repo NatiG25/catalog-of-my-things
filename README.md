@@ -34,11 +34,11 @@ To get a local copy up and running follow these simple example steps.
 
 ## Author
 
-👤 **Natnail G/gorgis**
+👤 **Nati Gebregorgis**
 
 - GitHub: [@NatiG25](https://github.com/NatiG25)
-- Twitter: [@NatiG87702270](https://twitter.com/NatiG87702270)
-- LinkedIn: [@Natnail](https://www.linkedin.com/in/natnailgorgis/ )
+- Twitter: [@Nati255](https://twitter.com/NatiG255)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/natigorgis/ )
 
 👤 **Hammad Siddique** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
 
